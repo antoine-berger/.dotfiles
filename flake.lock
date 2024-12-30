@@ -2,14 +2,18 @@
   "nodes": {
     "adhesive": {
       "locked": {
-        "lastModified": 1,
+        "lastModified": 1735566838,
         "narHash": "sha256-PAbzLjEfFgtMgbGcouSNDJOZ9UpkT6kSQ4vuSTiL31I=",
-        "path": "./nix/adhesive",
-        "type": "path"
+        "ref": "main",
+        "rev": "9bf3743474d514743d1a4fda5ecf8ad0ef57eaea",
+        "revCount": 1,
+        "type": "git",
+        "url": "ssh://git@github.com/raxl8/.dotfiles-adhesive.git"
       },
       "original": {
-        "path": "./nix/adhesive",
-        "type": "path"
+        "ref": "main",
+        "type": "git",
+        "url": "ssh://git@github.com/raxl8/.dotfiles-adhesive.git"
       }
     },
     "flake-compat": {

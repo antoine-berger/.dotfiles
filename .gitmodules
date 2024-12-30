@@ -1,3 +1,0 @@
-[submodule "nix/adhesive"]
-	path = nix/adhesive
-	url = git@github.com:raxl8/.dotfiles-adhesive.git

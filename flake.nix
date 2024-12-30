@@ -19,7 +19,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    adhesive.url = "path:./nix/adhesive";
+    adhesive.url = "git+ssh://git@github.com/raxl8/.dotfiles-adhesive.git?ref=main";
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, adhesive, ... }:
