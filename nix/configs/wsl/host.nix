@@ -7,6 +7,7 @@
   wsl = {
     enable = true;
     defaultUser = user;
+    docker-desktop.enable = true;
   };
 
   users.users.${user} = {
