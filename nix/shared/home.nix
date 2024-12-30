@@ -5,6 +5,7 @@
   home.packages = with pkgs; [
     clang
     fzf
+    nixfmt-rfc-style
     ripgrep
     rustup
     unzip

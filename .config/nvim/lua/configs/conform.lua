@@ -1,6 +1,7 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
+    nix = { "nixfmt" },
     -- nu = {"nufmt"}, -- broken for now
     python = { "isort", "black" },
     go = { "gofmt" },
