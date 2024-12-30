@@ -3,7 +3,7 @@ let
   inherit (config.lib.file) mkOutOfStoreSymlink;
 in
 {
-  xdg.configFile.nvim.source = mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.config/nvim";
+  xdg.configFile.nvim.source = mkOutOfStoreSymlink "${config.home.homeDirectory}/git/.dotfiles/.config/nvim";
 
   programs.neovim = {
     enable = true;
