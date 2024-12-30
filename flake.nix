@@ -22,13 +22,26 @@
     adhesive.url = "git+ssh://git@github.com/raxl8/.dotfiles-adhesive.git?ref=main";
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, adhesive, ... }:
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      home-manager,
+      adhesive,
+      ...
+    }:
     let
       stateVersion = "24.05";
-      utils = import ./nix/utils.nix
-        {
-          inherit inputs self nixpkgs home-manager adhesive stateVersion;
-        };
+      utils = import ./nix/utils.nix {
+        inherit
+          inputs
+          self
+          nixpkgs
+          home-manager
+          adhesive
+          stateVersion
+          ;
+      };
     in
     {
       nixosConfigurations = {

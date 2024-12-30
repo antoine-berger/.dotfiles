@@ -1,4 +1,9 @@
-{ pkgs, user, stateVersion, ... }:
+{
+  pkgs,
+  user,
+  stateVersion,
+  ...
+}:
 {
   home.username = user;
 
