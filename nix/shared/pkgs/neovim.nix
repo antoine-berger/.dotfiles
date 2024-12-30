@@ -1,0 +1,14 @@
+{ config, ... }:
+let
+  inherit (config.lib.file) mkOutOfStoreSymlink;
+in
+{
+  xdg.configFile.nvim.source = mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/.config/nvim";
+
+  programs.neovim = {
+    enable = true;
+    viAlias = true;
+    vimAlias = true;
+    defaultEditor = true;
+  };
+}
