@@ -11,8 +11,8 @@ return {
     end,
   },
   {
-  	"nvim-treesitter/nvim-treesitter",
-  	opts = require "configs.treesitter",
+    "nvim-treesitter/nvim-treesitter",
+    opts = require "configs.treesitter",
   },
   {
     "hrsh7th/nvim-cmp",
@@ -42,5 +42,23 @@ return {
         -- Configuration here, or leave empty to use defaults
       }
     end,
+  },
+  {
+    "christoomey/vim-tmux-navigator",
+    event = "VeryLazy",
+    cmd = {
+      "TmuxNavigateLeft",
+      "TmuxNavigateDown",
+      "TmuxNavigateUp",
+      "TmuxNavigateRight",
+      "TmuxNavigatePrevious",
+    },
+    keys = {
+      { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+      { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+      { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+      { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+      { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+    },
   },
 }

@@ -19,8 +19,8 @@
   xdg.enable = true;
 
   home.stateVersion = stateVersion;
-  home.file.".local/bin/zellij-sessionizer.nu" = {
-    source = ./scripts/zellij-sessionizer.nu;
+  home.file.".local/bin/tmux-sessionizer.nu" = {
+    source = ./scripts/tmux-sessionizer.nu;
     executable = true;
   };
 

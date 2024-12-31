@@ -15,8 +15,9 @@
     ./python.nix
     ./rust.nix
     ./starship.nix
+    ./tmux.nix
     ./uv.nix
-    ./zellij.nix
+    # ./zellij.nix
     ./zig.nix
     ./zoxide.nix
   ];

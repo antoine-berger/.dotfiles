@@ -8,13 +8,13 @@
       edit_mode: vi
       keybindings: [
         {
-          name: zellij_sessionizer
+          name: tmux_sessionizer
           modifier: control
           keycode: char_f
           mode: [emacs, vi_insert, vi_normal]
           event: {
             send: executehostcommand
-            cmd: "zellij-sessionizer.nu $env.GIT_REPOS_HOME"
+            cmd: "tmux-sessionizer.nu ...(ls -a $env.GIT_REPOS_HOME | where type == dir | each { $in.name })"
           }
         }
       ]
