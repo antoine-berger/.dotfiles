@@ -55,6 +55,7 @@
     gl = "git pull";
     gu = "git push";
     guu = "git push --set-upstream origin (git rev-parse --abbrev-ref HEAD)";
+    lg = "lazygit";
   };
 
   programs.nushell.extraEnv = ''
