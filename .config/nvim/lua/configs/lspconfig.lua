@@ -24,8 +24,6 @@ local servers = {
 
 local function on_attach(client, bufnr)
   configs.on_attach(client, bufnr)
-  local map = vim.keymap.set
-  map("n", "<leader>sd", vim.diagnostic.open_float)
 end
 
 for name, opts in pairs(servers) do
