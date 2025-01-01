@@ -88,6 +88,10 @@
         load-env $ssh_agent_env
         $ssh_agent_env | save --force $ssh_agent_file
     }
+
+    # Add keys to ssh-agent
+    use std
+    ^ssh-add o+e> (std null-device)
   '';
 
   programs.nushell.environmentVariables = {
