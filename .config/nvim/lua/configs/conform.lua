@@ -1,5 +1,6 @@
 local options = {
   formatters_by_ft = {
+    json = { "prettier" },
     lua = { "stylua" },
     nix = { "nixfmt" },
     -- nu = {"nufmt"}, -- broken for now
