@@ -1,6 +1,7 @@
 { ... }:
 {
   imports = [
+    ./aws-sam-cli.nix
     ./aws-vault.nix
     ./awscli.nix
     ./carapace.nix
