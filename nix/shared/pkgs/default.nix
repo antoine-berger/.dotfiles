@@ -5,6 +5,7 @@
     ./aws-vault.nix
     ./awscli.nix
     ./carapace.nix
+    ./fastfetch.nix
     ./gh.nix
     ./git.nix
     ./gpg.nix
