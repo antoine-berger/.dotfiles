@@ -15,9 +15,9 @@
     ./nushell
     ./pipenv.nix
     ./starship.nix
-    ./tmux.nix
+    # ./tmux.nix
     ./uv.nix
-    # ./zellij.nix
+    ./zellij
     ./zoxide.nix
   ];
 }
