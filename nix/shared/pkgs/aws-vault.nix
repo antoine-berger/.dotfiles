@@ -7,10 +7,6 @@
 
   programs.password-store.enable = true;
 
-  programs.nushell.extraEnv = ''
-    $env.AWS_VAULT_BACKEND = "pass"
-  '';
-
   home.activation = {
     password-store-init =
       let
@@ -30,5 +26,9 @@
         '';
       in
       lib.hm.dag.entryAfter [ "linkGeneration" ] block;
+  };
+
+  home.sessionVariables = {
+    AWS_VAULT_BACKEND = "pass";
   };
 }

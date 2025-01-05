@@ -12,7 +12,7 @@
     ./lazygit.nix
     ./mise.nix
     ./neovim.nix
-    ./nushell.nix
+    ./nushell
     ./pipenv.nix
     ./starship.nix
     ./tmux.nix
