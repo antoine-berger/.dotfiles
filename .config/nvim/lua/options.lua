@@ -26,3 +26,24 @@ if is_wsl() then
     cache_enabled = 0,
   }
 end
+
+o.nu = true
+o.relativenumber = true
+
+o.tabstop = 2
+o.softtabstop = 2
+o.shiftwidth = 2
+o.expandtab = true
+o.smartindent = true
+
+o.wrap = false
+
+o.hlsearch = false
+o.incsearch = true
+
+o.scrolloff = 8
+o.signcolumn = "yes"
+
+o.updatetime = 50
+
+o.colorcolumn = "80"

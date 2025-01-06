@@ -1,15 +1,19 @@
 require "nvchad.mappings"
 
 local map = vim.keymap.set
-local unmap = vim.keymap.del;
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
--- clipboard
-unmap("n", "<leader>pt")
-map("n", "<leader>y", "\"+y", { desc = "Yank to system clipboard" })
-map("v", "<leader>y", "\"+y", { desc = "Yank to system clipboard" })
-map("n", "<leader>p", "\"+p", { desc = "Paste from system clipboard" })
-map("v", "<leader>P", "\"+P", { desc = "Paste before from system clipboard" })
-map("v", "<leader>p", "\"+p", { desc = "Paste from system clipboard" })
+map("v", "J", ":m '>+1<CR>gv=gv")
+map("v", "K", ":m '<-2<CR>gv=gv")
+map("n", "<C-d>", "<C-d>zz")
+map("n", "<C-u>", "<C-u>zz")
+map("n", "n", "nzzzv")
+map("n", "N", "Nzzzv")
+
+map({"n", "v"}, "<leader>y", "\"+y", { desc = "Yank to system clipboard" })
+map("n", "<leader>Y", "\"+Y", { desc = "Yank line to system clipboard" })
+map({"n", "v"}, "<leader>d", "\"_d")
+
+map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
