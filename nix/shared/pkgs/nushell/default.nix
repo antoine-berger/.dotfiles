@@ -107,7 +107,7 @@ in
 
       # Add keys to ssh-agent
       use std
-      ^ssh-add o+e> (std null-device)
+      try { ^ssh-add o+e> (std null-device) }
     '';
 
     environmentVariables = {
