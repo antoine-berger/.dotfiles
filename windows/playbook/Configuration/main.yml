@@ -56,4 +56,6 @@ actions:
   - !writeStatus: {status: "Importing NixOS WSL"}
   - !powerShell:
     command: .\importWSL.ps1
+    exeDir: true
+    wait: true
     wait: true
