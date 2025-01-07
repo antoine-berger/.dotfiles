@@ -64,4 +64,9 @@ actions:
     command: .\importWSL.ps1
     exeDir: true
     wait: true
+
+  - !writeStatus: {status: "Deleting desktop shortcuts"}
+  - !powerShell:
+    command: .\deleteDesktopShortcuts.ps1
+    exeDir: true
     wait: true
