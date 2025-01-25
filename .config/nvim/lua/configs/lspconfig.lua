@@ -7,13 +7,15 @@ local configs = require "nvchad.configs.lspconfig"
 local servers = {
   gopls = {},
   nil_ls = {},
-  pyright = {
+  ruff = {},
+  basedpyright = {
     settings = {
-      python = {
-        analysis = {
-          autoSearchPaths = true,
-          typeCheckingMode = "basic",
-        },
+      disableOrganizeImports = true,
+      disableTaggedHints = true,
+      analysis = {
+        useLibraryCodeForTypes = true,
+        autoImportCompletions = true,
+        autoSearchPaths = true,
       },
     },
   },
