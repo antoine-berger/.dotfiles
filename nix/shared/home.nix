@@ -3,13 +3,12 @@
   user,
   stateVersion,
   ...
-}:
-{
+}: {
   home.username = user;
 
   home.packages = with pkgs; [
+    alejandra
     fzf
-    nixfmt-rfc-style
     ripgrep
     unzip
   ];
