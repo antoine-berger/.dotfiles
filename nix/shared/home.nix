@@ -1,25 +1,20 @@
 {
   pkgs,
   user,
-  stateVersion,
   ...
 }: {
-  home.username = user;
-
-  home.packages = with pkgs; [
-    alejandra
-    fzf
-    ripgrep
-    unzip
-  ];
+  home = {
+    username = user;
+    packages = with pkgs; [
+      alejandra
+      fzf
+      ripgrep
+      unzip
+    ];
+    stateVersion = "24.05";
+  };
 
   xdg.enable = true;
-
-  home.stateVersion = stateVersion;
-  home.file.".local/bin/tmux-sessionizer.nu" = {
-    source = ./scripts/tmux-sessionizer.nu;
-    executable = true;
-  };
 
   imports = [
     ./pkgs

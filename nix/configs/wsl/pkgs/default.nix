@@ -1,0 +1,5 @@
+{...}: {
+  imports = [
+    ./aws-vault.nix
+  ];
+}
