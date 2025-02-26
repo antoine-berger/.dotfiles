@@ -17,3 +17,6 @@ map("n", "<leader>Y", "\"+Y", { desc = "Yank line to system clipboard" })
 map({"n", "v"}, "<leader>d", "\"_d")
 
 map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = 'Telescope find diagnostics' })
