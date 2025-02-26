@@ -25,7 +25,8 @@
       AppleShowAllExtensions = true;
       FXDefaultSearchScope = "SCcf";
       FXPreferredViewStyle = "Nlsv";
-      NewWindowTarget = "Home";
+      NewWindowTarget = "Other";
+      NewWindowTargetPath = "/Users/${user}/Downloads";
       ShowPathbar = true;
       ShowStatusBar = true;
     };
@@ -34,7 +35,7 @@
       autohide-delay = 0.0;
       autohide-time-modifier = 0.0;
       minimize-to-application = true;
-      orientation = "left";
+      orientation = "right";
       persistent-apps = [];
       persistent-others = [];
       show-recents = false;
