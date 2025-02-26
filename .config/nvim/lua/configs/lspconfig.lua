@@ -10,12 +10,15 @@ local servers = {
   ruff = {},
   basedpyright = {
     settings = {
-      disableOrganizeImports = true,
-      disableTaggedHints = true,
-      analysis = {
-        useLibraryCodeForTypes = true,
-        autoImportCompletions = true,
-        autoSearchPaths = true,
+      basedpyright = {
+        disableOrganizeImports = true,
+        disableTaggedHints = true,
+        analysis = {
+          diagnosticMode = "workspace",
+          useLibraryCodeForTypes = true,
+          autoImportCompletions = true,
+          autoSearchPaths = true,
+        },
       },
     },
   },
