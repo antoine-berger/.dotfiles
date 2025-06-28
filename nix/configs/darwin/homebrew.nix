@@ -44,10 +44,5 @@
       "vlc"
       "zoom"
     ];
-    masApps = {
-      "Dropover - Easier Drag & Drop" = 1355679052;
-      "Hand Mirror" = 1502839586;
-      ScreenBrush = 1233965871;
-    };
   };
 }
