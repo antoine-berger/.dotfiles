@@ -85,6 +85,8 @@ in {
       gu = "git push";
       guu = "git push --set-upstream origin (git rev-parse --abbrev-ref HEAD)";
       lg = "lazygit";
+      ffmpeg = "ffmpeg -hide_banner";
+      ffprobe = "ffprobe -hide_banner";
     };
 
     envFile.text = ''

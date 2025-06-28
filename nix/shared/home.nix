@@ -7,7 +7,12 @@
     username = user;
     packages = with pkgs; [
       alejandra
+      ffmpeg
+      ffsubsync
       fzf
+      mediainfo
+      mkbrr
+      mkvtoolnix-cli
       ripgrep
       unzip
     ];
