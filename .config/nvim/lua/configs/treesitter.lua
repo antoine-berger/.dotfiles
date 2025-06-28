@@ -1,3 +1,3 @@
 return {
-  ensure_installed = { "lua", "nix", "python", "typescript" }
+  ensure_installed = { "go", "lua", "nix", "nu", "python", "rust", "toml", "typescript", "yaml", "zig" },
 }
