@@ -1,6 +1,7 @@
-{ config, ... }:
-{
+{config, ...}: {
   programs.mise.enable = true;
+
+  programs.mise.enableNushellIntegration = true;
 
   programs.nushell.extraEnv = ''
     let mise_cache = "${config.xdg.cacheHome}/mise"
