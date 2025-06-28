@@ -6,6 +6,8 @@
 
   users.knownUsers = [user];
 
+  system.primaryUser = user;
+
   system.stateVersion = 6;
 
   system.defaults = {
