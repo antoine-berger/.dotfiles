@@ -1,22 +1,35 @@
-{ config, lib, pkgs, ... }:
-let
+{
+  config,
+  lib,
+  pkgs,
+  osConfig,
+  ...
+}: let
   # credits: https://github.com/jaredmontoya/home-manager/commit/0b2179ce3e2627380fcf0d4db3f05c1182d56474
-  hmSessionVars = pkgs.runCommand "hm-session-vars.nu" { } ''
+  hmSessionVars = pkgs.runCommand "hm-session-vars.nu" {} ''
     echo "if ('__HM_SESS_VARS_SOURCED' not-in \$env) {$(${
       lib.getExe pkgs.nushell
     } -c "
-      source ${pkgs.callPackage ./capture-foreign-env.nix { }}
+      source ${pkgs.callPackage ./capture-foreign-env.nix {}}
       open ${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh | capture-foreign-env | to nuon
     ") | load-env}" >> "$out"
   '';
-in
-{
+  nixEnvironmentVars =
+    pkgs.runCommand "nix-environment-vars.nu" {
+      USER = config.home.username;
+      HOME = config.home.homeDirectory;
+    } ''
+      echo "if ('__NIX_DARWIN_SET_ENVIRONMENT_DONE' not-in \$env) {$(${
+        lib.getExe pkgs.nushell
+      } -c "
+        source ${pkgs.callPackage ./capture-foreign-env.nix {}}
+        open ${osConfig.system.build.setEnvironment} | capture-foreign-env | to nuon
+      ") | load-env}" >> "$out"
+    '';
+  inherit (config.lib.file) mkOutOfStoreSymlink;
+in {
   programs.nushell = {
     enable = true;
-
-    extraLogin = ''
-      source ${hmSessionVars}
-    '';
 
     extraConfig = ''
       $env.config = {
@@ -30,7 +43,7 @@ in
             mode: [emacs, vi_insert, vi_normal]
             event: {
               send: executehostcommand
-              cmd: "${pkgs.callPackage ./zellij-sessionizer.nix { }} $env.GIT_REPOS_HOME"
+              cmd: "${pkgs.callPackage ./zellij-sessionizer.nix {}} $env.GIT_REPOS_HOME"
             }
           }
         ]
@@ -74,7 +87,25 @@ in
       lg = "lazygit";
     };
 
-    extraEnv = ''
+    envFile.text = ''
+      mut previousPath = $env.PATH
+
+      source ${nixEnvironmentVars}
+
+      if ($previousPath != null) {
+        $env.PATH = ($env.PATH | split row ':') ++ $previousPath | uniq
+      }
+
+      $previousPath = $env.PATH
+
+      source ${hmSessionVars}
+
+      if ($previousPath != null) {
+        $env.PATH = ($env.PATH | split row ':') ++ $previousPath | uniq
+      }
+
+      hide previousPath
+
       use std "path add"
       # Local bin
       path add $"($env.HOME | path join ".local/bin")"
