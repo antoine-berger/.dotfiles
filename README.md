@@ -61,7 +61,7 @@ Follow these steps to set up WSL with NixOS and the dotfiles:
 
 5. Inside the `nix-shell`, clone the dotfiles repository:
    ```bash
-   git clone git@github.com:raxl8/.dotfiles.git ~/.dotfiles
+   git clone git@github.com:rdxl8/.dotfiles.git ~/.dotfiles
    ```
 
 6. Apply the NixOS configuration:
@@ -93,7 +93,7 @@ This will exit the \`nix-shell\` and then WSL.
    ```
 11. Create git directory and move over dotfiles repository
    ```nushell
-   mkdir git
+   mkdir $"($env.HOME)/git/
    sudo mv /root/.dotfiles $"($env.HOME)/git/.dotfiles"
    sudo chown -R $"($env.USER):users" $"($env.HOME)/git/.dotfiles"
    ```
