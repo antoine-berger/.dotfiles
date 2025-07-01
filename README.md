@@ -29,7 +29,7 @@ Follow these steps to set up your Windows environment:
 
 2. Run the following commands
    ```powershell
-   $url = "https://github.com/raxl8/.dotfiles/archive/refs/heads/main.zip"
+   $url = "https://github.com/rdxl8/.dotfiles/archive/refs/heads/main.zip"
    $downloadsPath = "$env:USERPROFILE\Downloads"
    Invoke-WebRequest -Uri $url -OutFile "$downloadsPath\dotfiles.zip"
    Expand-Archive -LiteralPath "$downloadsPath\dotfiles.zip" -DestinationPath "$downloadsPath"
