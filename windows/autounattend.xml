@@ -15,7 +15,6 @@
 			<ImageInstall>
 				<OSImage>
 					<Compact>false</Compact>
-					<InstallToAvailablePartition>true</InstallToAvailablePartition>
 				</OSImage>
 			</ImageInstall>
 			<UserData>
