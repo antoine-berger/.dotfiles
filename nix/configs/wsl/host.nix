@@ -28,6 +28,8 @@
     gnumake
     openssl
     zlib
+    cmake
+    clang-tools
   ];
 
   environment.sessionVariables = {
