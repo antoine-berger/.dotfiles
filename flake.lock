@@ -8,12 +8,12 @@
         "rev": "0e75139e362dad07477fe9f62e21ba21528b9879",
         "revCount": 2,
         "type": "git",
-        "url": "ssh://git@github.com/rdxl8/.dotfiles-adhesive.git"
+        "url": "ssh://git@github.com/antoine-berger/.dotfiles-adhesive.git"
       },
       "original": {
         "ref": "main",
         "type": "git",
-        "url": "ssh://git@github.com/rdxl8/.dotfiles-adhesive.git"
+        "url": "ssh://git@github.com/antoine-berger/.dotfiles-adhesive.git"
       }
     },
     "brew-src": {
