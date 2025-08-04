@@ -11,6 +11,8 @@
     ${config.programs.mise.package}/bin/mise activate nu | save --force ${config.xdg.cacheHome}/mise/init.nu
   '';
 
+  xdg.configFile.mise.source = mkOutOfStoreSymlink "${config.home.homeDirectory}/git/.dotfiles/.config/mise";
+
   programs.nushell.extraConfig = ''
     use ${config.xdg.cacheHome}/mise/init.nu
   '';

@@ -11,6 +11,7 @@
       email = adhesive.git.email;
       signingKey = adhesive.git.signingKey;
     };
+    credential.helper = adhesive.git.credentialHelper;
     commit = {
       gpgSign = true;
     };

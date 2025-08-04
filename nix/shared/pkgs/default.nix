@@ -4,20 +4,20 @@
     ./aws-sam-cli.nix
     ./aws-vault.nix
     ./awscli.nix
-    ./carapace.nix
-    ./fastfetch.nix
+    #./carapace.nix
+    #./fastfetch.nix
     ./gh.nix
     ./git.nix
     ./gpg.nix
-    ./lazygit.nix
+    #./lazygit.nix
     ./mise.nix
-    ./neovim.nix
+    #./neovim.nix
     ./nushell
-    ./pipenv.nix
+    #./pipenv.nix
     ./starship.nix
     # ./tmux.nix
-    ./uv.nix
-    ./zellij
-    ./zoxide.nix
+    #./uv.nix
+    #./zellij
+    #./zoxide.nix
   ];
 }

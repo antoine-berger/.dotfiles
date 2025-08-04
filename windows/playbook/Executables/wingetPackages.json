@@ -4,21 +4,31 @@
   "Sources": [
     {
       "Packages": [
-        {
-          "PackageIdentifier": "Microsoft.PowerShell"
-        },
-        {
-          "PackageIdentifier": "Valve.Steam"
-        },
-        {
-          "PackageIdentifier": "Discord.Discord"
-        },
-        {
-          "PackageIdentifier": "Spotify.Spotify"
-        },
-        {
-          "PackageIdentifier": "MartiCliment.UniGetUI"
-        }
+        { "PackageIdentifier": "Discord.Discord" },
+        { "PackageIdentifier": "Docker.DockerDesktop" },
+        { "PackageIdentifier": "ElectronicArts.EADesktop" },
+        { "PackageIdentifier": "EpicGames.EpicGamesLauncher" },
+        { "PackageIdentifier": "Jellyfin.JellyfinMediaPlayer" },
+        { "PackageIdentifier": "Microsoft.VisualStudioCode" },
+        { "PackageIdentifier": "Mojang.MinecraftLauncher" },
+        { "PackageIdentifier": "NZXT.CAM" },
+        { "PackageIdentifier": "Nextcloud.NextcloudDesktop" },
+        { "PackageIdentifier": "Notion.Notion" },
+        { "PackageIdentifier": "OBSProject.OBSStudio" },
+        { "PackageIdentifier": "PicoTorrent.PicoTorrent" },
+        { "PackageIdentifier": "Proton.ProtonMail" },
+        { "PackageIdentifier": "Proton.ProtonPass" },
+        { "PackageIdentifier": "Proton.ProtonVPN" },
+        { "PackageIdentifier": "SlackTechnologies.Slack" },
+        { "PackageIdentifier": "SteelSeries.GG" },
+        { "PackageIdentifier": "Termius.Termius" },
+        { "PackageIdentifier": "TradingView.TradingViewDesktop" },
+        { "PackageIdentifier": "Valve.Steam" },
+        { "PackageIdentifier": "VideoLAN.VLC" },
+        { "PackageIdentifier": "WinDirStat.WinDirStat" },
+        { "PackageIdentifier": "WinSCP.WinSCP" },
+        { "PackageIdentifier": "Zen-Team.Zen-Browser" },
+        { "PackageIdentifier": "Zoom.Zoom" }
       ],
       "SourceDetails": {
         "Argument": "https://cdn.winget.microsoft.com/cache",
