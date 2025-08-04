@@ -9,7 +9,7 @@
       inputs.systems.follows = "systems";
     };
 
-    adhesive.url = "git+ssh://git@github.com/rdxl8/.dotfiles-adhesive.git?ref=main";
+    adhesive.url = "git+ssh://git@github.com/antoine-berger/.dotfiles-adhesive.git?ref=main";
 
     nixos-wsl = {
       url = "github:nix-community/NixOS-WSL/main";
